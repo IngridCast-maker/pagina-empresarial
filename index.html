@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Evita Error 3: Meta etiqueta viewport para diseño responsivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoConsultores - Consultoría Ambiental</title>
+    <!-- Evita Error 2 y 10: Enlace correcto al CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Evita Error 1: Uso de etiquetas semánticas (header, nav, main, section, footer) -->
+    <header class="header-main">
+        <div class="header-container">
+            <h1 class="logo">EcoConsultores</h1>
+            <nav class="nav-main" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="header-desc">Especialistas en soluciones ambientales y sostenibilidad empresarial.</p>
+    </header>
+
+    <main>
+        <!-- Sección 1: Encabezado / Misión y Visión -->
+        <section id="inicio" class="section-inicio">
+            <h2>Nuestra Esencia</h2>
+            <div class="mision-vision-container">
+                <div class="mv-card">
+                    <h3>Misión</h3>
+                    <p>Asesorar a las empresas en la implementación de prácticas sostenibles, reduciendo su impacto ambiental y cumpliendo con la normatividad vigente, para construir un futuro más verde.</p>
+                </div>
+                <div class="mv-card">
+                    <h3>Visión</h3>
+                    <p>Ser la empresa líder de consultoría ambiental en el sector terciario para el año 2030, reconocida por nuestra innovación y compromiso con el desarrollo sostenible.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Proyectos -->
+        <section id="proyectos" class="section-proyectos">
+            <h2>Proyectos Destacados</h2>
+            <div class="proyectos-grid">
+                
+                <!-- Proyecto 1 -->
+                <article class="card-proyecto">
+                    <!-- Evita Error 4: Atributo alt descriptivo en imágenes -->
+                    <img src="https://picsum.photos/400/250?random=1" alt="Auditoría de huella de carbono en planta manufacturera">
+                    <h3>Auditoría de Huella de Carbono</h3>
+                    <p>Medición y reducción de emisiones de CO2 para empresas del sector industrial, logrando una disminución del 30% en su impacto anual.</p>
+                    <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer">Ver más detalles</a>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="card-proyecto">
+                    <img src="https://picsum.photos/400/250?random=2" alt="Implementación de sistema de tratamiento de aguas residuales">
+                    <h3>Tratamiento de Aguas Residuales</h3>
+                    <p>Diseño e implementación de sistemas de filtrado y reutilización de agua para complejos hoteleros, ahorrando millones de litros de agua al año.</p>
+                    <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer">Ver más detalles</a>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="card-proyecto">
+                    <img src="https://picsum.photos/400/250?random=3" alt="Capacitación a empleados sobre manejo de residuos sólidos">
+                    <h3>Capacitación en Residuos Sólidos</h3>
+                    <p>Programa de formación para más de 500 empleados de empresas de servicios sobre segregación, reciclaje y economía circular.</p>
+                    <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer">Ver más detalles</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección 3: Contacto -->
+        <section id="contacto" class="section-contacto">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes un proyecto en mente? Llena el siguiente formulario y nos pondremos en contacto contigo.</p>
+            
+            <!-- Evita Error 8: Validación básica con HTML5 (required, type="email") -->
+            <form id="form-contacto" action="#" method="POST" class="formulario">
+                
+                <!-- Evita Error 5: Etiquetas label correctamente asociadas con el atributo for -->
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required placeholder="tucorreo@ejemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <div class="footer-social">
+                <h4>Síguenos en redes sociales</h4>
+                <!-- Evita Error 7: Enlaces funcionales (usando # como placeholder válido) -->
+                <a href="#" aria-label="Facebook de EcoConsultores">Facebook</a> | 
+                <a href="#" aria-label="LinkedIn de EcoConsultores">LinkedIn</a> | 
+                <a href="#" aria-label="Twitter de EcoConsultores">Twitter</a>
+            </div>
+            <p class="copyright">&copy; 2026 EcoConsultores S.A. de C.V. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

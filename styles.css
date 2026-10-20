@@ -1,0 +1,258 @@
+/* --- Reset y Estilos Globales --- */
+/* Evita Error 6: Contraste adecuado (texto oscuro #333 sobre fondo claro) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+}
+
+body {
+    background-color: #f4f7f6;
+}
+
+/* Evita Error 2: Uso de selectores de clase para reutilización y ID para secciones únicas */
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- HEADER --- */
+.header-main {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #27ae60;
+    font-size: 2rem;
+}
+
+.nav-main ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-main a {
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.header-desc {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* --- SECCIONES GENERALES --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+/* --- MISIÓN Y VISIÓN --- */
+.mision-vision-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.mv-card {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 5px solid #27ae60;
+}
+
+/* --- PROYECTOS --- */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card-proyecto {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-proyecto:hover {
+    transform: translateY(-5px);
+}
+
+.card-proyecto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-proyecto h3, .card-proyecto p {
+    padding: 0 20px;
+}
+
+.card-proyecto p {
+    margin: 15px 0;
+}
+
+.btn-link {
+    display: inline-block;
+    margin: 0 20px 20px;
+    padding: 8px 15px;
+    background-color: #27ae60;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.btn-link:hover {
+    background-color: #219150;
+    text-decoration: none;
+}
+
+/* --- FORMULARIO DE CONTACTO --- */
+.section-contacto {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.formulario {
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #27ae60;
+    box-shadow: 0 0 5px rgba(39, 174, 96, 0.5);
+}
+
+.btn-submit {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #1a252f;
+}
+
+/* --- FOOTER --- */
+.footer-main {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.footer-social a {
+    color: #27ae60;
+    margin: 0 10px;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+/* =========================================
+   EVITA ERROR 3: DISEÑO RESPONSIVO (Media Queries)
+   ========================================= */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-main ul {
+        gap: 15px;
+    }
+
+    /* Apilar misión y visión en móviles */
+    .mision-vision-container {
+        flex-direction: column;
+    }
+
+    /* Ajustar grid de proyectos a 1 columna */
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-contacto {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
